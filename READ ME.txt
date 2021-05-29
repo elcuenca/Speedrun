@@ -1,4 +1,4 @@
 hi inside this file contains some personal notes that the developers want you to know: 
 
 Everything is theoretically impossible, until it is done 
-- past DevEl
+- past DevEl :)
