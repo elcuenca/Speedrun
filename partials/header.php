@@ -2,7 +2,6 @@
 	include ("partials/connect.php");
 ?>
 
-
 <!--- Header -->
 <header>
 		<!-- Header desktop -->
@@ -71,7 +70,7 @@
 							</li>
 
 							<li>
-								<a href="contact.html">Contact</a>
+								<a href="contact.php">Contact</a>
 							</li>
 						</ul>
 					</div>	
