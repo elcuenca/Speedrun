@@ -34,47 +34,47 @@
       <!--Form Starts-->
       <div class="col-sm-6">
       <h1>Products</h1>
-      <form role="form">
+      <form role="form" action="product_handler.php" method="POST" enctype="multipart/form-data">
                 <div class="box-body">
 
                   <!--Product Name Field-->
                   <div class="form-group">
                     <label for="name">Product</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter Product Name">
+                    <input type="text" class="form-control" id="name" placeholder="Enter Product Name" name="product_name">
                   </div>
                   
 
                   <!--Product Price Field-->
                   <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="text" class="form-control" id="price" placeholder="Enter Price">
+                    <input type="text" class="form-control" id="price" placeholder="Enter Price" name="price">
                   </div>
                   <div class="form-group">
 
                   <!--Product Color Field-->
                   <div class="form-group">
                     <label for="color">Color</label>
-                    <input type="text" class="form-control" id="color" placeholder="Enter Color">
+                    <input type="text" class="form-control" id="color" placeholder="Enter Color" name="color">
                   </div>
 
                   <!--Product Picture/s-->
                   <div class="form-group">
                     <label for="picture">Product Picture</label>
-                    <input type="file" id="picture">
+                    <input type="file" id="picture" name="file">
                     <p class="help-block">Please choose the highest resolution as possible for the product picture.</p>
                   </div>
 
                   <!--Product Description Field-->
                   <div class="form-group">
                     <label for="description">Product Description</label>
-                    <textarea id="description" class="form-control" rows="10" placeholder="Enter description"></textarea>
+                    <textarea id="description" class="form-control" rows="10" placeholder="Enter description" name="product_description"></textarea>
                   </div>
                   <!--Categories -->
                   <div class="form-group">
                     <label for="category">Category</label>
-                    <select id="category">
-                      <option>1</option>
-                      <option>2</option>
+                    <select id="category" name="category">
+                      <option>A</option>
+                      <option>B</option>
                     </select>
                 </div>
                 <!-- /.box-body -->
