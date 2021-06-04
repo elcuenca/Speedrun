@@ -34,11 +34,11 @@
       <!--Form Starts-->
       <div class="col-sm-6">
       <h1>Categories</h1>
-      <form role="form">
+      <form role="form" action="category_handler.php" method="POST">
                 <div class="box-body">
                   <div class="form-group">
                     <label for="category">Category</label>
-                    <input type="text" class="form-control" id="category" placeholder="Enter a new category">
+                    <input type="text" class="form-control" id="category" placeholder="Enter a new category" name="category_name">
                   </div>
                 </div>
                 <!-- /.box-body -->
