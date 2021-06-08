@@ -1,6 +1,24 @@
 <?php
 include ('admin_partials/head.php');
 
+if(isset($_POST['login'])){
+	include('../partials/connect.php');
+
+	$email=$_POST['email'];
+	$password=$_POST['password'];
+	$sql="SELECT * FROM admin_t WHERE username='$email' AND password='$password'";
+	$results=$connect->query($sql);
+	$final=$results->fetch_assoc();
+
+	if ($email=$final['username'] AND $password=$final['password']){
+		header('location: admin_index.php');
+	}else{
+		header('location: admin_login.php');
+	}
+
+}
+
+
 ?>
 <!-- TODO: [Design] create a header for our brand logo Speedrun -->
 <!-- Header --> 
@@ -21,7 +39,7 @@ include ('admin_partials/head.php');
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal" action="login_handler.php"method="POST">
+            <form class="form-horizontal" action="admin_login.php"method="POST">
               <div class="box-body">
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
@@ -44,8 +62,7 @@ include ('admin_partials/head.php');
               </div>
               <!-- /.box-body -->
               <div class="box-footer">
-                <button type="submit" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-info pull-right">Sign in</button>
+                <button type="submit" class="btn btn-info pull-right" name="login">Login</button>
               </div>
 	</div>
 
