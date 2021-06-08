@@ -69,12 +69,20 @@
                     <label for="description">Product Description</label>
                     <textarea id="description" class="form-control" rows="10" placeholder="Enter description" name="product_description"></textarea>
                   </div>
+
                   <!--Categories -->
                   <div class="form-group">
                     <label for="category">Category</label>
                     <select id="category" name="category">
-                      <option>A</option>
-                      <option>B</option>
+                      <!-- Showing Categories from categories_t (Dynamic) -->
+                      <?php
+                        include('../partials/connect.php');
+                        $cat= "SELECT * from category_t";
+                        $results=mysqli_query($connect,$cat);
+                        while($row=mysqli_fetch_assoc($results)){
+                          echo "<option value=".$row['id'].">".$row['category_name']."</option>";
+                        }
+                      ?>
                     </select>
                 </div>
                 <!-- /.box-body -->
