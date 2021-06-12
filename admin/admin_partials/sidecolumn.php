@@ -38,7 +38,12 @@
             </span>
           </a>
         </li>
-        
+        <li>
+          <a href="admin_partials/logout.php">
+            <i class="fa fa-th"></i> <span>Logout</span>
+            </span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->
