@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ('admin_partials/head.php');
 
 if(isset($_POST['login'])){
@@ -9,6 +10,9 @@ if(isset($_POST['login'])){
 	$sql="SELECT * FROM admin_t WHERE username='$email' AND password='$password'";
 	$results=$connect->query($sql);
 	$final=$results->fetch_assoc();
+
+  $_SESSION['email']=$final['username'];
+  $_SESSION['password']=$final['password'];
 
 	if ($email=$final['username'] AND $password=$final['password']){
 		header('location: admin_index.php');
