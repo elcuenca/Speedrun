@@ -35,48 +35,59 @@
       <!--Form Starts-->
       <div class="col-sm-6">
       <h1>Products</h1>
-      <form role="form" action="product_handler.php" method="POST" enctype="multipart/form-data">
+      <form role="form" action="product_update_handler.php" method="POST" enctype="multipart/form-data">
+        <?php
+        $newID=$_GET['update_id'];
+
+        include('../partials/connect.php');
+
+        $sql="Select * from products_t WHERE id='$newID'";
+        $results=$connect->query($sql);
+        $final=$results->fetch_assoc(); 
+
+        ?>
                 <div class="box-body">
 
                   <!--Product Name Field-->
                   <div class="form-group">
                     <label for="name">Product</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter Product Name" name="product_name">
+                    <input type="text" class="form-control" id="name" placeholder="Enter Product Name" value="<?php echo $final['name'] ?>" name="product_name">
                   </div>
                   
 
                   <!--Product Price Field-->
                   <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="text" class="form-control" id="price" placeholder="Enter Price" name="price">
+                    <input type="text" class="form-control" id="price" placeholder="Enter Price" value="<?php echo $final['price'] ?>" name="price">
                   </div>
+                  
 
                   <!--Product Color Field-->
                   <div class="form-group">
                     <label for="color">Color</label>
-                    <input type="text" class="form-control" id="color" placeholder="Enter Color" name="color">
+                    <input type="text" class="form-control" id="color" placeholder="Enter Color" value="<?php echo $final['color'] ?>" name="color">
                   </div>
 
                   <!--Product Picture/s-->
                   <div class="form-group">
                     <label for="picture">Product Picture</label>
-                    <input type="file" id="picture" name="file">
+                    <input type="file" id="picture" value="<?php echo $final['picture'] ?>" name="file">
                     <p class="help-block">Please choose the highest resolution as possible for the product picture.</p>
                   </div>
 
                   <!--Product Description Field-->
                   <div class="form-group">
                     <label for="description">Product Description</label>
-                    <textarea id="description" class="form-control" rows="10" placeholder="Enter description" name="product_description"></textarea>
+                    <textarea id="description" class="form-control" rows="10" placeholder="Enter description" value="<?php echo $final['description'] ?>" name="product_description"></textarea>
                   </div>
 
                   <!--Categories -->
                   <div class="form-group">
                     <label for="category">Category</label>
-                    <select id="category" name="category">
+                    <select id="category" value="<?php echo $final['category'] ?>" name="category">
                       <!-- Showing Categories from categories_t (Dynamic) -->
-                      <?php
-                        include('../partials/connect.php');
+                      <?php 
+                        
                         $cat= "SELECT * from category_t";
                         $results=mysqli_query($connect,$cat);
                         while($row=mysqli_fetch_assoc($results)){
@@ -85,10 +96,12 @@
                       ?>
                     </select>
                   </div>
-                </div>
+                </div> 
                 <!-- /.box-body -->
-                <div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+
+                <div class="box-footer" style="background-color: rgba(0,0,0,0.0);">
+                  <input type="hidden" value="<?php echo $final['id'] ?>" name="form_id">
+                  <button type="submit" class="btn btn-primary" name="update">Update</button>
                 </div>
               </form>
       </div>
