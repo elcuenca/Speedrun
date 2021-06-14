@@ -110,6 +110,8 @@
             <th>Product ID</th>
             <th>Name</th>
             <th>Price</th>
+            <!--  This empty tags are set for the update and edit columns -->
+            <th></th>
             <th></th>
           </tr>
 
@@ -121,7 +123,7 @@
 
           while ($final=$results->fetch_assoc()) {
             
-            echo "<tr><td>".$final['id']."</td><td>".'<a href="proshow.php?pro_id='.$final['id'].'">'.$final['name']."</a></td><td>".$final['price']."</td><td>".'<a href="products_update.php?update_id='.$final['id'].'">'."Update"."</a></td></tr>"; 
+            echo "<tr><td>".$final['id']."</td><td>".'<a href="proshow.php?pro_id='.$final['id'].'">'.$final['name']."</a></td><td>".$final['price']."</td><td>".'<a href="products_update.php?update_id='.$final['id'].'">'."Update"."</a></td><td>".'<a href="prodelete.php?delete_id='.$final['id'].'" style="color:red">'."Delete"."</a></td></tr>"; 
             
           } 
           echo "</table>";
