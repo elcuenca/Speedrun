@@ -64,6 +64,10 @@
   tr:nth-child(even){
     background-color:  rgba(34,45,50,0.1);
   }
+
+  a:hover {
+    color:  orangered;
+  }
 </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -106,6 +110,7 @@
             <th>Product ID</th>
             <th>Name</th>
             <th>Price</th>
+            <th></th>
           </tr>
 
           <?php
@@ -116,7 +121,7 @@
 
           while ($final=$results->fetch_assoc()) {
             
-            echo "<tr><td>".$final['id']."</td>"."<td>".'<a href="proshow.php?pro_id='.$final['id'].'">'.$final['name']."</a></td><td>".$final['price']."</td></tr>"; 
+            echo "<tr><td>".$final['id']."</td><td>".'<a href="proshow.php?pro_id='.$final['id'].'">'.$final['name']."</a></td><td>".$final['price']."</td><td>".'<a href="products_update.php?update_id='.$final['id'].'">'."Update"."</a></td></tr>"; 
             
           } 
           echo "</table>";
