@@ -50,7 +50,6 @@
                     <label for="price">Price</label>
                     <input type="text" class="form-control" id="price" placeholder="Enter Price" name="price">
                   </div>
-                  <div class="form-group">
 
                   <!--Product Color Field-->
                   <div class="form-group">
@@ -85,8 +84,10 @@
                         }
                       ?>
                     </select>
+                  </div>
                 </div>
                 <!-- /.box-body -->
+                <div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </form>
