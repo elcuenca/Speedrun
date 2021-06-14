@@ -113,7 +113,7 @@
           <div class="card">
             
             <div class="container">
-              <img src="<?php echo $final['picture'] ?>" alt="Product Picture" style="max-width: 40%">
+              <img src="../<?php echo $final['picture'] ?>" alt="Product Picture" style="max-width: 45%">
               <h3><b><?php echo $final['name'] ?></b></h3>
               <!-- &#8369 stands for the html code for Peso Sign -->
               <h4>&#8369 <?php echo $final['price'] ?></h4>
