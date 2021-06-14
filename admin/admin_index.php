@@ -29,7 +29,17 @@
     <!-- Main content -->
     <section class="content">
     
-    
+    <!-- Buttons for Admin to Use --> 
+    <div class="row">
+      <div class="col-sm-9">
+      <a href="products.php">
+         <button class="btn btn-primary">Add New Product</button>
+        </a>
+        <a href="categories.php">
+         <button class="btn btn-primary">Add New Category</button><hr><br>
+        </a>
+      </div>
+    </div>
       
 
     </section>

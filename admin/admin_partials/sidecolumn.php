@@ -25,22 +25,29 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Main Navigation</li>
+
+        <li>
+          <a href="admin_index.php">
+            <i class="fa"></i> <span>Home</span>
+            </span>
+          </a>
+        </li>
         
         <li>
           <a href="categories.php">
-            <i class="fa fa-th"></i> <span>Categories</span>
+            <i class="fa"></i> <span>Categories</span>
             </span>
           </a>
         </li>
         <li>
-          <a href="products.php">
-            <i class="fa fa-th"></i> <span>Products</span>
+          <a href="products_show.php">
+            <i class="fa"></i> <span>Products</span>
             </span>
           </a>
         </li>
         <li>
           <a href="admin_partials/logout.php">
-            <i class="fa fa-th"></i> <span>Logout</span>
+            <i class="fa"></i> <span>Logout</span>
             </span>
           </a>
         </li>

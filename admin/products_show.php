@@ -95,8 +95,11 @@
     <div class="row">
       <div class="col-sm-2">
       </div>
-      <div class="col-sm-8">
 
+      <div class="col-sm-8">
+        <a href="products.php">
+         <button class="btn btn-primary">Add New Product</button><hr><br>
+        </a>
 
         <!--Dev Note: 
 

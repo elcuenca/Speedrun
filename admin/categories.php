@@ -44,7 +44,7 @@
                 </div>
                 <!-- /.box-body -->
 
-                <div class="box-footer">
+                <div class="box-footer" style="background-color: rgba(0,0,0,0.0)">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </form>
