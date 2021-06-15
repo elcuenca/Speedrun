@@ -24,7 +24,7 @@
 							</li>
 
 							<li>
-								<a href="shop.php">Shop</a>
+								<a href="product.php">Shop</a>
 							</li>
 
 							<li>
