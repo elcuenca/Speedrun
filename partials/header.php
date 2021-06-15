@@ -13,7 +13,7 @@
 					
 					<!-- Logo desktop -->		
 					<a href="index.php" class="logo">
-						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
+						<img src="images/icons/logo.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
