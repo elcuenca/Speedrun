@@ -6,7 +6,31 @@
 <header>
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
-			
+		
+			<!-- Top Bar --> 
+			<div class="top-bar">
+					<div class="content-topbar flex-sb-m h-full container">
+						<div class="left-top-bar">
+							The Curators of Good Shoes 
+						</div>
+
+						<div class="right-top-bar flex-w h-full">
+							
+							<a href="#" class="flex-c-m trans-04 p-lr-25">
+								My Account
+							</a>
+
+							<a href="#" class="flex-c-m trans-04 p-lr-25">
+								Sign Up
+							</a>
+
+							<a href="#" class="flex-c-m trans-04 p-lr-25">
+								Newsletter
+							</a>
+
+						</div>
+					</div>
+				</div>
 
 			<div class="wrap-menu-desktop">
 				<nav class="limiter-menu-desktop container">
