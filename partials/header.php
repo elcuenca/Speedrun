@@ -91,7 +91,7 @@
 
 
 		<!-- Menu Mobile --> 
-		<div class="menu-mobile" style="background-color: #f8f8ff;">
+		<div class="menu-mobile">
 			
 			<ul class="main-menu-m">
 				<li>
