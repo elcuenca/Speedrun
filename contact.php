@@ -55,11 +55,11 @@
 
 						<div class="size-212 p-t-2">
 							<span class="mtext-110 cl2">
-								Address
+								Didn't find the shoes you want?
 							</span>
 
 							<p class="stext-115 cl6 size-213 p-t-18">
-								Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US
+								Let us help you find your shoes by sending us an email and tell us more about the shoes that you want and we will find it for you!
 							</p>
 						</div>
 					</div>
@@ -75,7 +75,7 @@
 							</span>
 
 							<p class="stext-115 cl1 size-213 p-t-18">
-								+1 800 1236879
+								(02) 551-85771 
 							</p>
 						</div>
 					</div>
@@ -91,7 +91,7 @@
 							</span>
 
 							<p class="stext-115 cl1 size-213 p-t-18">
-								contact@example.com
+								speedrun.ecomm.dev@gmail.com
 							</p>
 						</div>
 					</div>
