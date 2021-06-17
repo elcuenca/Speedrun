@@ -10,7 +10,7 @@ if (isset($_SESSION['cart'])){
 		</script>";
 	}else{
 		$count=count($_SESSION['cart']);
-		$_SESSION['cart'][$count]=array('ietm_id' => $_GET['cart_id'], 'item_name'=>$_GET['cart_name'], 'item_price'=>$_GET['cart_price']);
+		$_SESSION['cart'][$count]=array('ietm_id' => $_GET['cart_id'], 'item_name'=>$_GET['cart_name'], 'item_price'=>$_GET['cart_price'], 'quantity'=> 1);
 
 
 		#alert when product has been added 
@@ -22,7 +22,7 @@ if (isset($_SESSION['cart'])){
 	
 
 } else {
-	$_SESSION['cart'][0]=array('item_id'=>$_GET['cart_id'], 'item_name'=>$_GET['cart_name'], 'item_price'=>$_GET['cart_price']);
+	$_SESSION['cart'][0]=array('item_id'=>$_GET['cart_id'], 'item_name'=>$_GET['cart_name'], 'item_price'=>$_GET['cart_price'], 'quantity'=> 1);
 
 	#alert when product has been added 
 	echo "<script>alert('Product has been added! REdirecting you back to the shop.');

@@ -31,7 +31,7 @@
 		
 
 	<!-- Shoping Cart -->
-	<form class="bg0 p-t-75 p-b-85">
+	<div class="bg0 p-t-75 p-b-85">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
@@ -55,8 +55,11 @@
 								?>	
 								<tr class="table_row">
 									<td class="column-1">
-										<div class="how-itemcart1">
-											<button class="btn btn-sm btn-outline-danger">Remove</button>
+										<div class="">
+											<form action="cart_remove.php" method="POST">
+											<button class="btn btn-sm btn-outline-danger" name="remove">Remove</button>
+											<input type="hidden" name="item_name" value="<?php echo $value['item_name'] ?>">
+											</form>
 										</div>
 									</td>
 									<td class="column-2"><?php echo $value['item_name'] ?></td>
@@ -67,7 +70,7 @@
 												<i class="fs-16 zmdi zmdi-minus"></i>
 											</div>
 
-											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product1" value="1">
+											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product1" value="<?php echo $value['quantity'] ?>">
 
 											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
 												<i class="fs-16 zmdi zmdi-plus"></i>
@@ -184,7 +187,7 @@
 				</div>
 			</div>
 		</div>
-	</form>
+	</div>
 		
 	
 		
