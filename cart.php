@@ -47,10 +47,13 @@
 								</tr>
 
 								<?php
+									$subtotal=0;
 									if (isset($_SESSION['cart'])) {
-										$subtotal=0;
+										
 										foreach ($_SESSION['cart'] as $key => $value) { 
 										
+										#Total Logic
+										$subtotal=$subtotal+$value['item_price']*$value['quantity'];
 
 								?>	
 								<tr class="table_row">
@@ -166,7 +169,12 @@
 
 							<div class="size-209 p-t-1">
 								<span class="mtext-110 cl2">
-									&#8369 <?php echo $subtotal ?>
+								<!-- Dev Note: Temporarily set to $subtotal but will be changed to $total variable when shipping logic is done
+
+									-Dev El
+
+								-->
+									&#8369 <?php echo $subtotal ?>  
 								</span>
 							</div>
 						</div>
