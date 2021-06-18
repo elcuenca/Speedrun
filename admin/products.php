@@ -38,6 +38,13 @@
       <form role="form" action="product_handler.php" method="POST" enctype="multipart/form-data">
                 <div class="box-body">
 
+                   <!--Product SKU Code Field-->
+                  <div class="form-group">
+                    <label for="sku">SKU Code</label>
+                    <input type="text" class="form-control" id="sku" placeholder="Enter Product SKU e.g. BBAJ1M" name="sku">
+                  </div>
+                  
+
                   <!--Product Name Field-->
                   <div class="form-group">
                     <label for="name">Product</label>
@@ -50,6 +57,25 @@
                     <label for="price">Price</label>
                     <input type="text" class="form-control" id="price" placeholder="Enter Price" name="price">
                   </div>
+
+                  <!--Product Weight Field-->
+                  <div class="form-group">
+                    <label for="weight">Weight</label>
+                    <input type="text" class="form-control" id="weight" placeholder="Enter weight in kg" name="weight">
+                  </div>
+
+                  <!--Product Weight Field-->
+                  <div class="form-group">
+                    <label for="size">Size</label>
+                    <input type="text" class="form-control" id="size" placeholder="Enter Shoe Size" name="size">
+                  </div>
+
+                  <!--Product Dimension Field-->
+                  <div class="form-group">
+                    <label for="dimension">Dimension</label>
+                    <input type="text" class="form-control" id="dimension" placeholder="Enter dimension 1 x 1 x 1" name="dimension">
+                  </div>
+
 
                   <!--Product Color Field-->
                   <div class="form-group">
@@ -81,7 +107,11 @@
                         $results=mysqli_query($connect,$cat);
                         while($row=mysqli_fetch_assoc($results)){
                           echo "<option value=".$row['id'].">".$row['category_name']."</option>";
+
                         }
+
+                        $connect->close();
+                        $results->close(); 
                       ?>
                     </select>
                   </div>
