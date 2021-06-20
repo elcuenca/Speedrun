@@ -126,36 +126,36 @@
 
 							<div class="size-209 p-r-18 p-r-0-sm w-full-ssm">
 								<p class="stext-111 cl6 p-t-2">
-									There are no shipping methods available. Please double check your address, or contact us if you need any help.
+									For our grand launch, your first order will be having a FREE SHIPPING.
+									Our courier will provide the best product shipment from our store down to your doorstep!
+								</p> <br>
+
+								<p class="stext-111 cl6 p-t-2">	
+									Please make sure that your address and contact number is correct so that we will
+									not have a problem on processing your order. 
 								</p>
 								
+								
 								<div class="p-t-15">
-									<span class="stext-112 cl8">
-										Calculate Shipping
-									</span>
 
-									<div class="rs1-select2 rs2-select2 bor8 bg0 m-b-12 m-t-9">
-										<select class="js-select2" name="time">
-											<option>Select a country...</option>
-											<option>USA</option>
-											<option>UK</option>
-										</select>
-										<div class="dropDownSelect2"></div>
-									</div>
-
+									<form action="handler/order_handler.php" method="POST">
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="state" placeholder="State /  country">
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="Address" placeholder="Enter Address">
 									</div>
 
 									<div class="bor8 bg0 m-b-22">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="postcode" placeholder="Postcode / Zip">
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="phone" placeholder="Contact Number">
 									</div>
-									
-									<div class="flex-w">
-										<div class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer">
-											Update Totals
-										</div>
+
+									<div class="rs1-select2 rs2-select2 bor8 bg0 m-b-12 m-t-9">
+										<select class="js-select2" name="MOP">
+											<option>Mode of Payment</option>
+											<option>Paypal</option>
+											<option>Cash on Delivery</option>
+										</select>
+										<div class="dropDownSelect2"></div>
 									</div>
+								
 										
 								</div>
 							</div>
@@ -170,7 +170,7 @@
 
 							<div class="size-209 p-t-1">
 								<span class="mtext-110 cl2">
-								<!-- Dev Note: Temporarily set to $subtotal but will be changed to $total variable when shipping logic is done
+								<!-- Dev Note: Temporarily set to $subtotal but will be changed to $total variable once shipping logic is done
 
 									-Dev El
 
@@ -180,9 +180,11 @@
 							</div>
 						</div>
 
-						<button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer" name="order">
+						<input type="hidden" name="total" value="<?php echo $subtotal ?>">
+						<button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer" name="order" type="submit" name="place_order">
 							Place Order
 						</button>
+					</form>
 					</div>
 				</div>
 			</div>
