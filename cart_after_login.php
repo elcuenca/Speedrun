@@ -140,7 +140,7 @@
 
 									<form action="handler/order_handler.php" method="POST">
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="Address" placeholder="Enter Address">
+										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="address" placeholder="Enter Address">
 									</div>
 
 									<div class="bor8 bg0 m-b-22">
