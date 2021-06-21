@@ -37,6 +37,7 @@ if ($payment=="paypal"){
 	window.location.href='../index.php'</script>";
 }
 
-
+#deleting contents of cart right after checkout process
+unset($_SESSION['cart']); 
 
 ?>
