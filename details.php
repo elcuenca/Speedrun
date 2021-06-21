@@ -60,12 +60,7 @@
 									<?php echo $final['name'] ?>	
 								</h4>
 							</div>
-
-							<div class="col-sm-2">
-								<!-- Add To Wishlist -->
-								<a href="#" class="fs-25 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
-								<i class="zmdi zmdi-favorite"></i>
-							</div>
+				
 						</div>
 						
 					

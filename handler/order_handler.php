@@ -7,8 +7,9 @@ $total=$_POST['total'];
 $phone_number=$_POST['phone'];
 $address=$_POST['address'];
 $customerID=$_SESSION['customer_id'];
+$payment=$_POST['mode_of_payment'];
 
-$sql="INSERT INTO orders_t(customer_id,address,phone_number,total_amount) VALUES ('$customerID', '$address', '$phone_number', '$total')";
+$sql="INSERT INTO orders_t(customer_id,address,phone_number,total_amount, pay_method) VALUES ('$customerID', '$address', '$phone_number', '$total', '$payment' )";
 $connect->query($sql);
 
 
@@ -26,8 +27,16 @@ foreach ($_SESSION['cart'] as $key => $value){
 	$connect->query($sql3);
 }
 
-echo "<script> alert('Order has been placed. Thank you for shopping!');
-window.location.href='../index.php'</script>";
+
+if ($payment=="paypal"){
+	$_SESSION['total']=$total;
+	header('location: paypal.php');
+
+}else{
+	echo "<script> alert('Order has been placed. Thank you for shopping!');
+	window.location.href='../index.php'</script>";
+}
+
 
 
 ?>

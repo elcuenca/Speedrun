@@ -148,10 +148,9 @@
 									</div>
 
 									<div class="rs1-select2 rs2-select2 bor8 bg0 m-b-12 m-t-9">
-										<select class="js-select2" name="MOP">
-											<option>Mode of Payment</option>
-											<option>Paypal</option>
-											<option>Cash on Delivery</option>
+										<select class="js-select2" name="mode_of_payment">
+											<option value="paypal">Paypal</option>
+											<option value="cash">Cash on Delivery</option>
 										</select>
 										<div class="dropDownSelect2"></div>
 									</div>
