@@ -16,10 +16,7 @@
 
 						<div class="right-top-bar flex-w h-full">
 							
-							<a href="#" class="flex-c-m trans-04 p-lr-25">
-								My Account
-							</a>
-
+							
 							<a href="#" class="flex-c-m trans-04 p-lr-25">
 								Sign Up
 							</a>
@@ -27,6 +24,21 @@
 							<a href="#" class="flex-c-m trans-04 p-lr-25">
 								Newsletter
 							</a>
+
+							<?php
+							if (!empty($_SESSION['email'])){?>
+								<a href="handler/customer_logout.php" class="flex-c-m trans-04 p-lr-25">
+									Logout
+								</a>
+							<?php }else{ ?>
+								<a href="customer_forms.php" class="flex-c-m trans-04 p-lr-25">
+									Login
+								</a>
+							<?php }
+							?>
+							
+							
+
 
 						</div>
 					</div>
