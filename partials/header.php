@@ -1,4 +1,4 @@
-<?php
+ <?php
 	include ("partials/connect.php");
 ?>
 
@@ -82,8 +82,14 @@
 						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
+						<?php 
+							if (!empty($_SESSION['cart'])){
+								$qty=count($_SESSION['cart']); ?>
+								<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11  icon-header-noti" onclick="location.href='cart.php'" data-notify="<?php echo $qty ?>">
 
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11  " onclick="location.href='cart.php'">
+						<?php }else{ ?>
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11  icon-header-noti" onclick="location.href='cart.php'" data-notify="0">
+							<?php } ?>
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
 
@@ -107,8 +113,14 @@
 				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
 					<i class="zmdi zmdi-search"></i>
 				</div>
+				<?php 
+							if (!empty($_SESSION['cart'])){
+								$qty=count($_SESSION['cart']); ?>
+								<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11  icon-header-noti" onclick="location.href='cart.php'" data-notify="<?php echo $qty ?>">
 
-				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10" onclick="location.href='cart.php'">
+						<?php }else{ ?>
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11  icon-header-noti" onclick="location.href='cart.php'" data-notify="0">
+							<?php } ?>
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
 
