@@ -1,7 +1,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<?php
+session_start();
 
+?>
 <head>
     <!-- Add meta tags for mobile and IE -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +28,7 @@
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
-                            value: '88.44'
+                            value: <? echo $_SESSION['total'] ?>
                         }
                     }]
                 });
