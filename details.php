@@ -30,6 +30,9 @@
 				$sql="Select * from products_t where id='$id'";
 				$results=$connect->query($sql);
 				$final=$results->fetch_assoc();
+
+				#fetch product's name for the sizes
+				$product_name= $final['name'];
 				?>
 				<div class="col-md-6 col-lg-7 p-b-30">
 					<div class="p-l-25 p-r-30 p-lr-0-lg">
@@ -76,7 +79,7 @@
 						<!--  -->
 						<div class="p-t-33">
 
-							<!-- Keeping this for now
+							
 							<div class="flex-w flex-r-m p-b-10">
 								<div class="size-203 flex-c-m respon6">
 									Size
@@ -85,37 +88,28 @@
 								<div class="size-204 respon6-next">
 									<div class="rs1-select2 bor8 bg0">
 										<select class="js-select2" name="time">
-											<option>Choose an option</option>
-											<option>Size S</option>
-											<option>Size M</option>
-											<option>Size L</option>
-											<option>Size XL</option>
-										</select>
-										<div class="dropDownSelect2"></div>
-									</div>
-								</div>
-							</div>
+											<!--Showing Sizes from products_t sharing the same product name (dynamic)-->
+											<?php 
+												include('../partials/connect.php');
+												$sizes= "SELECT * from products_t WHERE name= '$product_name'";
+												$results=mysqli_query($connect,$sizes);
+												while($row=mysqli_fetch_assoc($results)){
+													echo "<option value=".$row['id'].">".$row['size']."</option>";
+												}	
 
-							<div class="flex-w flex-r-m p-b-10">
-								<div class="size-203 flex-c-m respon6">
-									Color
-								</div>
-
-								<div class="size-204 respon6-next">
-									<div class="rs1-select2 bor8 bg0">
-										<select class="js-select2" name="time">
-											<option>Choose an option</option>
-											<option>Red</option>
-											<option>Blue</option>
-											<option>White</option>
-											<option>Grey</option>
+												$connect->close();
+												$results->close();
+											?>
+											
 										</select>
 										<div class="dropDownSelect2"></div>
 									</div>
 								</div>
 							</div>
 							
-							-->
+							
+							
+							
 							<div class="flex-w flex-r-m p-b-10">
 								<div class="size-204 flex-w flex-m respon6-next">
 									<div class="wrap-num-product flex-w m-r-20 m-tb-10">
