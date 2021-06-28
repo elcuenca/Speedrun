@@ -31,13 +31,20 @@
     
     <!-- Buttons for Admin to Use --> 
     <div class="row">
-      <div class="col-sm-9">
-      <a href="products.php">
+      <div class="col-sm-12">
+
+        <a href="products.php">
          <button class="btn btn-primary">Add New Product</button>
         </a>
+
         <a href="categories.php">
          <button class="btn btn-primary">Add New Category</button><hr><br>
         </a>
+
+        <a href="orders.php">
+         <button class="btn btn-primary">View Orders</button><hr><br>
+        </a>
+
       </div>
     </div>
       
