@@ -103,7 +103,7 @@
 				<p class="stext-107 cl6 txt-center">
 
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright Speedrun &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved<br>This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright Speedrun &copy;<script>document.write(new Date().getFullYear());</script> <br>All rights reserved<br><span style="color: #222">This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" style="color: #222">Colorlib</a></span>
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
 				</p>
