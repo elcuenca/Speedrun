@@ -38,7 +38,7 @@
 
 
 						<p class="stext-113 cl6 p-b-26">
-							Any questions? Let us know by sending us an email at sppedrun.ecom.dev@gmail.com or call us on (02) 551-8577
+							Any questions? Let us know by sending us an email at speedrun.ecom.dev@gmail.com or call us on (02) 551-8577
 						</p>
 					</div>
 				</div>
@@ -60,7 +60,7 @@
 						</h3>
 
 						<p class="stext-113 cl6 p-b-26">
-							insert our mission here 
+							Speedrun's mission is to provide a luxurious service to our dear customers by our exceptional customer service and by our high quality sport shoes that all sport shoes enthuasiasts, athletes, and even just a regular customer will enjoy.  
 						</p>
 
 						<div class="bor16 p-l-29 p-b-9 m-t-22">
