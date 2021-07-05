@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2021 at 01:43 PM
+-- Generation Time: Jun 17, 2021 at 02:32 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -136,8 +136,12 @@ CREATE TABLE `order_details_t` (
 
 CREATE TABLE `products_t` (
   `id` int(11) NOT NULL,
+  `SKU_name` varchar(11) NOT NULL COMMENT 'Category tag + Abbreviated Name',
   `name` varchar(30) NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` float NOT NULL,
+  `weight` float(2,2) NOT NULL,
+  `size` int(2) NOT NULL,
+  `dimension` tinytext NOT NULL,
   `color` varchar(11) NOT NULL,
   `picture` varchar(30) NOT NULL,
   `description` mediumtext NOT NULL,
@@ -150,11 +154,8 @@ CREATE TABLE `products_t` (
 -- Dumping data for table `products_t`
 --
 
-INSERT INTO `products_t` (`id`, `name`, `price`, `color`, `picture`, `description`, `category_id`, `created_at`, `updated_at`) VALUES
-(1, 'Test Product 1', 42069, '0', 'ako2.png', 'Hi! Test Product 1', 2, '2021-06-04 19:34:13', '2021-06-04 19:34:13'),
-(2, 'Test Product 1', 42069, '0', '../uploads/ako2.png', 'Hi! Test Product 1', 2, '2021-06-04 19:34:35', '2021-06-04 19:34:35'),
-(3, 'Test product 2', 420, '0', '../uploads/sabaw.bmp', 'Test product 2', 0, '2021-06-04 19:37:06', '2021-06-04 19:37:06'),
-(4, 'Test product 3', 420, 'White', '../uploads/sabaw.bmp', 'Test product 3', 0, '2021-06-04 19:38:17', '2021-06-04 19:38:17');
+INSERT INTO `products_t` (`id`, `SKU_name`, `name`, `price`, `weight`, `size`, `dimension`, `color`, `picture`, `description`, `category_id`, `created_at`, `updated_at`) VALUES
+(12, 'BBAJ1M', 'Air Jordan  1 Mid', 7894.5, 0.68, 9, '11 X 10 X 12 ', 'Red', 'uploads/BS001.png', 'The Air Jordan 1 Mid Shoe is inspired by the first AJ1, offering fans of Jordan retros a chance to follow in the footsteps of greatness. Fresh colour trims the clean, classic materials, injecting some newness into the familiar design.', 3, '2021-06-15 12:32:18', '2021-06-15 12:32:18');
 
 --
 -- Indexes for dumped tables
@@ -246,7 +247,7 @@ ALTER TABLE `order_details_t`
 -- AUTO_INCREMENT for table `products_t`
 --
 ALTER TABLE `products_t`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
