@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<title> Products | Speedrun </title>
 <?php 
 	include ("partials/head.php");
 ?>

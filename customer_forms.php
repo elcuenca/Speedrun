@@ -5,6 +5,8 @@
 	include ("partials/head.php");
 ?>
 
+<<title> Login | Speedrun</title>>
+
 <body class="animsition">
 
 	<?php 

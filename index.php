@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<title> Home | Speedrun</title>
 <?php 
 	include ("partials/head.php");
 ?>

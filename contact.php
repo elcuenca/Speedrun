@@ -12,6 +12,9 @@
 		include ("partials/header.php");		
 	?>
 
+	<title> Contact Us | Speedrun</title>
+
+
 
 
 	<!-- Title page -->

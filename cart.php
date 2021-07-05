@@ -6,6 +6,8 @@
 	include ("partials/head.php");
 ?>
 
+<title> Cart | Speedrun</title>
+
 <body class="animsition">
 
 	<?php 
