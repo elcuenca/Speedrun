@@ -83,9 +83,9 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Product List 
+        Order List 
         <br>
-        <small>Your complete list of all products saved</small>
+        <small>Your complete list of customer's order</small>
       </h1>
     </section>
 
